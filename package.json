@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "webpub -c cfg.ts"
+    "dev": "webpub -c webpub.config.ts"
   },
   "repository": {
     "type": "git",
@@ -13,12 +14,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/jorgenskogmo/webpub-starter/issues"
   },
   "homepage": "https://github.com/jorgenskogmo/webpub-starter#readme",
   "dependencies": {
-    "webpub": "file://../webpub/package"
+    "webpub": "file://../webpub/dist/webdev-0.0.10.tgz"
   }
 }
