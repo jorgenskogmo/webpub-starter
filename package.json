@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "webpub",
-    "ref:clear": "rm -rf node_modules package-lock.json",
+    "clear": "rm -rf node_modules package-lock.json",
     "ref": "npm run ref:clear && npm i"
   },
   "repository": {
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/jorgenskogmo/webpub-starter#readme",
   "dependencies": {
-    "webpub": "file:../webpub/dist/"
+    "webpub": "file:../webpub/webpub-0.1.34.tgz"
   }
 }

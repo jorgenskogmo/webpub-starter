@@ -19,11 +19,31 @@ export const main = (config, page) => `
 
     <code>${JSON.stringify(page.meta)}</code>
 
+    <hr>
+    
+    <code>${JSON.stringify(page.children)}</code>
+
     <div>${page.content}</div>
   </main>
 `;
 
-export const render = (config, page) =>
-  `${head(config, page)} ${main(config, page)} ${foot(config, page)}`;
+const list = (page) => {
+  return page.children
+    .map((child) => {
+      console.log(">> list", child.url);
+      return `<li><a href="${child.url}">${child.meta.title} (${child.url})</a></li>\n`;
+    })
+    .join("");
+};
+
+export const render = (config, page) => {
+  console.log("@render", page.url, page.children);
+
+  if (page.type === "list") {
+    page.content += `<ul>${list(page)}</ul>`;
+  }
+
+  return `${head(config, page)} ${main(config, page)} ${foot(config, page)}`;
+};
 
 export default { head, main, foot, render };
