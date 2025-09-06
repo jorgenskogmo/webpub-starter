@@ -1,5 +1,5 @@
-import type { WebpubConfig } from "webpub";
-// import { defineConfig } from "webpub";
+import type { WebpubOptions } from "webpub";
+import { defineConfig } from "webpub";
 
 import * as theme from "./templates/themes/local/index.js";
 import * as srcsetPlugin from "webpub/plugins/srcset/index.js";
@@ -9,19 +9,25 @@ import * as srcsetPlugin from "webpub/plugins/srcset/index.js";
 //   image_widths: [200, 400, 800, 1200, 1600]
 // }
 
-const config: WebpubConfig = {
+const config: WebpubOptions = {
   name: "webpub demo",
   version: "0.0.1",
+
+  // has defaults:
   content_directory: "content",
-  templates_directory: "PRIVATE",
-  theme: theme,
   output_directory: "site",
-  image_widths: [150, 300, 600, 1200], // FIXME: this is a srcset plugin config - should not be here
+  theme: theme,
+  theme_directory: "templates/themes/local",
   plugins: [srcsetPlugin],
+  image_widths: [150, 300, 600, 1200], // FIXME: this is a srcset plugin config - should not be here
+
+  // optional:
   marked_options: { gfm: true, breaks: true },
   open_browser: true,
   devserver_enabled: true,
   devserver_port: 3000,
 };
 
-export default config;
+defineConfig(config);
+
+// export default config;

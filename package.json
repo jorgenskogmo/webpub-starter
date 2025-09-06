@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/jorgenskogmo/webpub-starter#readme",
   "dependencies": {
-    "webpub": "file:../webpub/webpub-0.1.15.tgz"
+    "webpub": "file:../webpub/dist/"
   }
 }

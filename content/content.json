@@ -1,4 +1,22 @@
 {
+  "/./": {
+    "content": "\n# root index\n\nlist root directories here\n",
+    "meta": {
+      "author": "Jane Doe",
+      "date": "2025-08-23",
+      "summary": "A sample markdown file demonstrating image handling",
+      "title": "root index"
+    }
+  },
+  "/projects/": {
+    "content": "\n# projects index\n\nlist projects here\n",
+    "meta": {
+      "author": "Jane Doe",
+      "date": "2025-08-23",
+      "summary": "A sample markdown file demonstrating image handling",
+      "title": "projects index"
+    }
+  },
   "/projects/aa/": {
     "content": "\n# AA Project Example\n\nWelcome to the **AA Project** example markdown file. This file demonstrates:\n\n![Sample Image](images/frederik-rosar-jLQPbHrz9eI-unsplash.jpg)\n\nAnd some text after the image\n",
     "meta": {
