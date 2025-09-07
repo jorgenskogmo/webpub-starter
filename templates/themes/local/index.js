@@ -4,7 +4,7 @@ export const head = (config, page) => `<!DOCTYPE html>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>${config.name} ${config.version}</title>
-      <link rel="stylesheet" href="/assets/styles.css" />
+      <link rel="stylesheet" href="/assets/styles.css?t=${Date.now()}" />
     </head>
   `;
 
@@ -15,13 +15,23 @@ export const foot = (_config, page) => `
 export const main = (config, page) => `
 <body>
   <main>
-    <h1>Default page (${config.name} ${config.version})</h1>
+    <h1>Local page (${config.name} ${config.version})</h1>
 
     <code>${JSON.stringify(page.meta)}</code>
 
+    hallo4
     <hr>
     
     <code>${JSON.stringify(page.children)}</code>
+
+    <textarea style="display:none" id="data-page">${JSON.stringify(
+      page
+    )}</textarea>
+    <script>
+      const txt = document.querySelector("#data-page").value.trim();
+      // console.log("txt:", txt)
+      console.log("page:", JSON.parse(txt))
+    </script>
 
     <div>${page.content}</div>
   </main>
@@ -30,14 +40,13 @@ export const main = (config, page) => `
 const list = (page) => {
   return page.children
     .map((child) => {
-      console.log(">> list", child.url);
       return `<li><a href="${child.url}">${child.meta.title} (${child.url})</a></li>\n`;
     })
     .join("");
 };
 
 export const render = (config, page) => {
-  console.log("@render", page.url, page.children);
+  // console.log("@render", page.url, page.children);
 
   if (page.type === "list") {
     page.content += `<ul>${list(page)}</ul>`;

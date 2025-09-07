@@ -4,18 +4,26 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>webpub demo 0.0.1</title>
-      <link rel="stylesheet" href="/assets/styles.css" />
+      <link rel="stylesheet" href="/assets/styles.css?t=1757232786256" />
     </head>
    
 <body>
   <main>
-    <h1>Default page (webpub demo 0.0.1)</h1>
+    <h1>Local page (webpub demo 0.0.1)</h1>
 
     <code>{"author":"John Smith","date":"2025-08-23","summary":"A sample markdown file for the BB project, demonstrating frontmatter, headings, images, tables, and code blocks.","tags":["typography","images","tables","markdown","example"],"title":"BB Project Example"}</code>
 
+    hallo4
     <hr>
     
     <code>[]</code>
+
+    <textarea style="display:none" id="data-page">{"url":"/projects/bb/","meta":{"author":"John Smith","date":"2025-08-23","summary":"A sample markdown file for the BB project, demonstrating frontmatter, headings, images, tables, and code blocks.","tags":["typography","images","tables","markdown","example"],"title":"BB Project Example"},"content":"<h1>BB Project Example</h1>\n<p>Welcome to the <strong>BB Project</strong> example markdown file. This file demonstrates:</p>\n<p>Some lit-components:</p>\n<p><qdi-button variant=\"primary\" onclick=\"alert('alo!')\">say alo</qdi-button><br><qdi-button variant=\"primary\" id=\"mybtn\">say alo alo</qdi-button></p>\n<script>\n  document.querySelector(\"#mybtn\").addEventListener(\"click\", () => {\n    alert(\"alo alo\");\n  })\n</script>\n\n<ul>\n<li>Frontmatter</li>\n<li>Headings</li>\n<li>Typography</li>\n<li>Images</li>\n<li>Tables</li>\n<li>Lists</li>\n</ul>\n<h2>Typography</h2>\n<h3>Headings</h3>\n<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>\n<h5>Heading 5</h5>\n<h6>Heading 6</h6>\n<h3>Emphasis</h3>\n<p><em>Italic text</em></p>\n<p><strong>Bold text</strong></p>\n<p><em><strong>Bold and italic text</strong></em></p>\n<blockquote>\n<p>This is a blockquote for the BB project.</p>\n</blockquote>\n<h3>Lists</h3>\n<ul>\n<li>Unordered list item A</li>\n<li>Unordered list item B<ul>\n<li>Nested item</li>\n</ul>\n</li>\n</ul>\n<ol>\n<li>Ordered list item A</li>\n<li>Ordered list item B<ol>\n<li>Nested ordered item</li>\n</ol>\n</li>\n</ol>\n<h2>Images</h2>\n<p><img src=\"https://placehold.co/400x200.png?text=BB+Project+Image\" alt=\"BB Project Image\"></p>\n<h2>Tables</h2>\n<table>\n<thead>\n<tr>\n<th>Feature</th>\n<th>Supported</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Frontmatter</td>\n<td>Yes</td>\n<td>YAML at the top of the file</td>\n</tr>\n<tr>\n<td>Headings</td>\n<td>Yes</td>\n<td>All levels</td>\n</tr>\n<tr>\n<td>Images</td>\n<td>Yes</td>\n<td>Markdown and HTML</td>\n</tr>\n<tr>\n<td>Tables</td>\n<td>Yes</td>\n<td>Standard markdown tables</td>\n</tr>\n<tr>\n<td>Lists</td>\n<td>Yes</td>\n<td>Ordered and unordered</td>\n</tr>\n</tbody></table>\n<h2>Code</h2>\n<pre><code class=\"language-js\">// BB Project JavaScript example\nconsole.log(&#39;Hello, BB Project!&#39;);\n</code></pre>\n<h2>Links</h2>\n<p><a href=\"https://www.11ty.dev/\">Visit Eleventy</a></p>\n<hr>\n<p><em>End of BB project example markdown file.</em></p>\n","type":"detail","parent":"/projects/","children":[]}</textarea>
+    <script>
+      const txt = document.querySelector("#data-page").value.trim();
+      // console.log("txt:", txt)
+      console.log("page:", JSON.parse(txt))
+    </script>
 
     <div><h1>BB Project Example</h1>
 <p>Welcome to the <strong>BB Project</strong> example markdown file. This file demonstrates:</p>

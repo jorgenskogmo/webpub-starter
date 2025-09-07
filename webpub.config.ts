@@ -1,6 +1,5 @@
 import { type WebpubOptions, defineConfig } from "webpub";
 
-import * as theme from "./templates/themes/local/index.js";
 import { srcsetPlugin } from "webpub/plugins/srcset/index.js";
 
 srcsetPlugin.configure({
@@ -10,11 +9,8 @@ srcsetPlugin.configure({
 const config: WebpubOptions = {
 	name: "webpub demo",
 	version: "0.0.1",
-
-	// has defaults:
 	content_directory: "content",
 	output_directory: "site",
-	theme: theme,
 	theme_directory: "templates/themes/local",
 	plugins: [srcsetPlugin],
 
