@@ -18,7 +18,7 @@
     }
   },
   "/projects/aa/": {
-    "content": "\n# AA Project Example\n\nWelcome to the **AA Project** example markdown file. This file demonstrates:\n\n![Sample Image](images/frederik-rosar-jLQPbHrz9eI-unsplash.jpg)\n\nAnd some text after the image\n",
+    "content": "\nWelcome to the **AA Project** example markdown file. This file demonstrates an image:\n\n![Sample Image](images/frederik-rosar-jLQPbHrz9eI-unsplash.jpg)\n\nAnd some text after the image\n",
     "meta": {
       "author": "Jane Doe",
       "date": "2025-08-23",

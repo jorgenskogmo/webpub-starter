@@ -15,25 +15,29 @@ export const foot = (_config, page) => `
 export const main = (config, page) => `
 <body>
   <main>
-    <h1>Local page (${config.name} ${config.version})</h1>
-
-    <code>${JSON.stringify(page.meta)}</code>
-
-    hallo4
-    <hr>
+    <code>Local page (${config.name} ${config.version})</code>
     
-    <code>${JSON.stringify(page.children)}</code>
+    <h1>${page.meta.title}</h1>
+    ${page.meta.date ? `<p class="small">date: ${page.meta.date}</p>` : ""}
+    
+    ${
+      page.meta.modified
+        ? `<p class="small">modified: ${page.meta.modified}</p>`
+        : ""
+    }
 
-    <textarea style="display:none" id="data-page">${JSON.stringify(
-      page
-    )}</textarea>
-    <script>
-      const txt = document.querySelector("#data-page").value.trim();
-      // console.log("txt:", txt)
-      console.log("page:", JSON.parse(txt))
-    </script>
+    
+    ${
+      page.meta?.tags
+        ? `<ul class="tags">${page.meta.tags
+            .map((t) => `<li>${t}</li>`)
+            .join("")}</ul>`
+        : "notags"
+    }
+    
 
-    <div>${page.content}</div>
+    <section class="content">${page.content}</section>
+
   </main>
 `;
 

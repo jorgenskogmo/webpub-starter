@@ -4,33 +4,29 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>webpub demo 0.0.1</title>
-      <link rel="stylesheet" href="/assets/styles.css?t=1757232786255" />
+      <link rel="stylesheet" href="/assets/styles.css?t=1757359405260" />
     </head>
    
 <body>
   <main>
-    <h1>Local page (webpub demo 0.0.1)</h1>
-
-    <code>{"author":"Jane Doe","date":"2025-08-23","summary":"A sample markdown file demonstrating image handling","title":"projects index"}</code>
-
-    hallo4
-    <hr>
+    <code>Local page (webpub demo 0.0.1)</code>
     
-    <code>[{"url":"/projects/aa/","meta":{"author":"Jane Doe","date":"2025-08-23","summary":"A sample markdown file demonstrating image handling","tags":["typography","images","markdown","example"],"title":"AA Project Example"},"content":"","type":"detail","parent":"/projects/","children":[]},{"url":"/projects/bb/","meta":{"author":"John Smith","date":"2025-08-23","summary":"A sample markdown file for the BB project, demonstrating frontmatter, headings, images, tables, and code blocks.","tags":["typography","images","tables","markdown","example"],"title":"BB Project Example"},"content":"","type":"detail","parent":"/projects/","children":[]},{"url":"/projects/vejers-strand/","meta":{"categories":["spring","surfing","sea","beach","denmark"],"description":"Sorena is trying out her new, thicker wetsuit at Vejers Strand in waves that are not well suited for surfing.","draft":false,"isFeatured":true,"keywords":["surfing","denmark","sea"],"modified":"27/8/2025","thumbnail":"./images/JVW_250502_163733.jpg","title":"Surfing at Vejers Strand"},"content":"","type":"detail","parent":"/projects/","children":[]}]</code>
+    <h1>projects index</h1>
+    <p class="small">date: 2025-08-23</p>
+    
+    
 
-    <textarea style="display:none" id="data-page">{"url":"/projects/","meta":{"author":"Jane Doe","date":"2025-08-23","summary":"A sample markdown file demonstrating image handling","title":"projects index"},"content":"<h1>projects index</h1>\n<p>list projects here</p>\n<ul><li><a href=\"/projects/aa/\">AA Project Example (/projects/aa/)</a></li>\n<li><a href=\"/projects/bb/\">BB Project Example (/projects/bb/)</a></li>\n<li><a href=\"/projects/vejers-strand/\">Surfing at Vejers Strand (/projects/vejers-strand/)</a></li>\n</ul>","type":"list","parent":"/./","children":[{"url":"/projects/aa/","meta":{"author":"Jane Doe","date":"2025-08-23","summary":"A sample markdown file demonstrating image handling","tags":["typography","images","markdown","example"],"title":"AA Project Example"},"content":"","type":"detail","parent":"/projects/","children":[]},{"url":"/projects/bb/","meta":{"author":"John Smith","date":"2025-08-23","summary":"A sample markdown file for the BB project, demonstrating frontmatter, headings, images, tables, and code blocks.","tags":["typography","images","tables","markdown","example"],"title":"BB Project Example"},"content":"","type":"detail","parent":"/projects/","children":[]},{"url":"/projects/vejers-strand/","meta":{"categories":["spring","surfing","sea","beach","denmark"],"description":"Sorena is trying out her new, thicker wetsuit at Vejers Strand in waves that are not well suited for surfing.","draft":false,"isFeatured":true,"keywords":["surfing","denmark","sea"],"modified":"27/8/2025","thumbnail":"./images/JVW_250502_163733.jpg","title":"Surfing at Vejers Strand"},"content":"","type":"detail","parent":"/projects/","children":[]}]}</textarea>
-    <script>
-      const txt = document.querySelector("#data-page").value.trim();
-      // console.log("txt:", txt)
-      console.log("page:", JSON.parse(txt))
-    </script>
+    
+    notags
+    
 
-    <div><h1>projects index</h1>
+    <section class="content"><h1>projects index</h1>
 <p>list projects here</p>
 <ul><li><a href="/projects/aa/">AA Project Example (/projects/aa/)</a></li>
 <li><a href="/projects/bb/">BB Project Example (/projects/bb/)</a></li>
 <li><a href="/projects/vejers-strand/">Surfing at Vejers Strand (/projects/vejers-strand/)</a></li>
-</ul></div>
+</ul></section>
+
   </main>
  
   </body>

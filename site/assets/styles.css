@@ -131,6 +131,21 @@ li {
   line-height: var(--line-height-normal);
 }
 
+ul.tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5rem;
+}
+ul.tags li {
+  margin: 0;
+  padding-inline: 0.5rem;
+  background: var(--muted-color);
+  color: var(--code-bg);
+  border-radius: 3px;
+}
+
 blockquote {
   margin: 1em 0;
   padding-left: 1em;
@@ -153,4 +168,18 @@ pre {
 pre {
   padding: 1em;
   overflow-x: auto;
+}
+
+main {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* -- */
+
+section.content {
+  margin-block-start: 1rem;
 }
