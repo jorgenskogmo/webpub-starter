@@ -25,6 +25,8 @@ All these can be configured, @see: config
 
 ## Content files
 
+The convention is to use markdown file with yaml frontmatter
+
 ## Configuration
 
 ### Required fields
