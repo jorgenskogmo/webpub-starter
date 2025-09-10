@@ -7,11 +7,10 @@ srcsetPlugin.configure({
 });
 
 const config: WebpubOptions = {
-  name: "webpub demo",
-  version: "0.0.1",
   content_directory: "content",
-  output_directory: "site",
-  theme_directory: "templates/themes/qdi-ds",
+  theme_directory: "templates",
+  // theme_directory: "templates-qdi",
+
   plugins: [srcsetPlugin],
 
   // optional:
@@ -19,7 +18,6 @@ const config: WebpubOptions = {
   open_browser: true,
   devserver_enabled: true,
   devserver_port: 3000,
-
 };
 
 defineConfig(config);

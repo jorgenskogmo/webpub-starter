@@ -138,6 +138,7 @@ ul.tags {
   display: flex;
   gap: 0.5rem;
 }
+
 ul.tags li {
   margin: 0;
   padding-inline: 0.5rem;

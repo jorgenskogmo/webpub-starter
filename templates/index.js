@@ -1,4 +1,4 @@
-export const head = (config, page) => `<!DOCTYPE html>
+export const head = (config, _page) => `<!DOCTYPE html>
   <html lang="en">
     <head>
       <meta charset="UTF-8" />
@@ -8,7 +8,7 @@ export const head = (config, page) => `<!DOCTYPE html>
     </head>
   `;
 
-export const foot = (_config, page) => `
+export const foot = (_config, _page) => `
   </body>
 </html>`;
 
@@ -20,20 +20,18 @@ export const main = (config, page) => `
     <h1>${page.meta.title}</h1>
     ${page.meta.date ? `<p class="small">date: ${page.meta.date}</p>` : ""}
     
-    ${
-      page.meta.modified
-        ? `<p class="small">modified: ${page.meta.modified}</p>`
-        : ""
-    }
+    ${page.meta.modified
+    ? `<p class="small">modified: ${page.meta.modified}</p>`
+    : ""
+  }
 
     
-    ${
-      page.meta?.tags
-        ? `<ul class="tags">${page.meta.tags
-            .map((t) => `<li>${t}</li>`)
-            .join("")}</ul>`
-        : "notags"
-    }
+    ${page.meta?.tags
+    ? `<ul class="tags">${page.meta.tags
+      .map((t) => `<li>${t}</li>`)
+      .join("")}</ul>`
+    : "notags"
+  }
     
 
     <section class="content">${page.content}</section>
@@ -55,6 +53,17 @@ export const render = (config, page) => {
   if (page.type === "list") {
     page.content += `<ul>${list(page)}</ul>`;
   }
+
+  /*
+
+  TODO:
+  default page template is main()
+  lets follow a convention where page.url (e.g. "projects") would look for a render method
+  called renderProjects(config, page) in this file
+  if found, use that instead of main()....
+
+
+  */
 
   return `${head(config, page)} ${main(config, page)} ${foot(config, page)}`;
 };

@@ -6,7 +6,7 @@ tags: ["typography", "images", "markdown", "example"]
 summary: "A sample markdown file demonstrating image handling"
 ---
 
-Welcome to the **AA Project** example markdown file. This file demonstrates an image:
+Welcome, Jonthan!, to the **AA Project** example markdown file. This file demonstrates an image:
 
 ![Sample Image](images/frederik-rosar-jLQPbHrz9eI-unsplash.jpg)
 

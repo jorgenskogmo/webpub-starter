@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "webpub",
-    "clear": "rm -rf node_modules package-lock.json",
-    "ref": "npm run clear && npm i"
+    "dev": "webpub dev",
+    "build": "webpub",
+    "clear": "rm -rf node_modules package-lock.json"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,6 @@
   "dependencies": {
     "@qdi/design-system": "file:../../repos/common-ui/dist/libs/design-system/",
     "lit": "^3.3.1",
-    "webpub": "file:../webpub/jorgenskogmo-webpub-0.1.53.tgz"
+    "webpub": "file:../webpub/jorgenskogmo-webpub-0.1.58.tgz"
   }
 }
