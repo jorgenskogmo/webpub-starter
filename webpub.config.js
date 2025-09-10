@@ -1,17 +1,19 @@
-import { type WebpubOptions, defineConfig } from "webpub";
+//@ts-check
+import { defineConfig } from "webpub";
 
-import { srcsetPlugin } from "webpub/plugins/srcset/index.js";
+// import { srcsetPlugin } from "webpub/plugins/srcset/index.js";
 
-srcsetPlugin.configure({
-  image_widths: [200, 400, 800, 1200, 1600],
-});
+// srcsetPlugin.configure({
+//   image_widths: [200, 400, 800, 1200, 1600],
+// });
 
-const config: WebpubOptions = {
+
+const config = {
   content_directory: "content",
   theme_directory: "templates",
   // theme_directory: "templates-qdi",
 
-  plugins: [srcsetPlugin],
+  // plugins: [srcsetPlugin],
 
   // optional:
   marked_options: { gfm: true, breaks: true },

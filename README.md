@@ -17,7 +17,7 @@ Use `npm run build` to only rebuild the site.
 
 ## Filesystem layout
 
-All these can be configured, @see: config
+All these can be configured, @see: Configuration
 
 - ./content : directories with index.md files (@see: content-files)
 - ./templates: html layouts
