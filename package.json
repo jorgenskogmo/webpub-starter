@@ -21,8 +21,6 @@
   },
   "homepage": "https://github.com/jorgenskogmo/webpub-starter#readme",
   "dependencies": {
-    "@qdi/design-system": "file:../../repos/common-ui/dist/libs/design-system/",
-    "lit": "^3.3.1",
-    "webpub": "file:../webpub/jorgenskogmo-webpub-0.1.61.tgz"
+    "@dearstudio/webpub": "^0.1.66"
   }
 }
