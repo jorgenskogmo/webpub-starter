@@ -1,13 +1,13 @@
 # webpub-starter
 
-Starter-kit for the [webpub](https://github.com/jorgenskogmo/webpub) tool.
+Starter-kit for the webpubn[Github](https://github.com/jorgenskogmo/webpub) [NPM](https://www.npmjs.com/package/@dearstudio/webpub) tool.
 
-## Requirements
+### Requirements
 
 - node.js with npm, version: 22.14+
 - Only tested on macOS
 
-## Scripts
+### Scripts
 
 Run `npm install` to instal dependencies
 
@@ -15,7 +15,9 @@ Use `npm run dev` to rebuild the site and start a hot-reloading dev server.
 
 Use `npm run build` to only rebuild the site.
 
-## Filesystem layout
+## User documentation
+
+### Filesystem layout
 
 All these can be configured, @see: Configuration
 
@@ -23,18 +25,18 @@ All these can be configured, @see: Configuration
 - ./templates: html layouts
 - ./site: the ready-to-be-deployed static website
 
-## Content files
+### Content files
 
 The convention is to use markdown file with yaml frontmatter
 
-## Configuration
+### Configuration
 
-### Required fields
+#### Required fields
 
-### Optional fields
+#### Optional fields
 
-## Templates
+### Templates
 
-### URL-specific templates
+#### URL-specific templates
 
-## Plugins
+### Plugins

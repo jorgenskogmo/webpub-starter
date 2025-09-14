@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/jorgenskogmo/webpub-starter#readme",
   "dependencies": {
-    "@dearstudio/webpub": "^0.1.66"
+    "@dearstudio/webpub": "latest"
   }
 }
