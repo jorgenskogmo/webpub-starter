@@ -1,25 +1,16 @@
 {
   "name": "webpub-starter",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "dev": "webpub dev",
-    "build": "webpub",
-    "clear": "rm -rf node_modules package-lock.json"
+    "build": "webpub"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jorgenskogmo/webpub-starter.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jorgenskogmo/webpub-starter/issues"
-  },
-  "homepage": "https://github.com/jorgenskogmo/webpub-starter#readme",
   "dependencies": {
     "@dearstudio/webpub": "latest"
   }
